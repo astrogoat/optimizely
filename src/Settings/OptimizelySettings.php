@@ -10,7 +10,7 @@ class OptimizelySettings extends AppSettings
     public string $account_id;
 
     protected array $rules = [
-        'account_id' => ['required', 'account_id'],
+        'account_id' => ['required'],
     ];
 
     protected static array $actions = [
