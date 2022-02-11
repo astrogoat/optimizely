@@ -2,11 +2,11 @@
 
 namespace Astrogoat\Optimizely;
 
+use Astrogoat\Optimizely\Settings\OptimizelySettings;
 use Helix\Lego\Apps\App;
 use Helix\Lego\LegoManager;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Astrogoat\Optimizely\Settings\OptimizelySettings;
 
 class OptimizelyServiceProvider extends PackageServiceProvider
 {
