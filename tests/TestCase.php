@@ -2,9 +2,9 @@
 
 namespace Astrogoat\Optimizely\Tests;
 
+use Astrogoat\Optimizely\OptimizelyServiceProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use Astrogoat\Optimizely\OptimizelyServiceProvider;
 
 class TestCase extends Orchestra
 {

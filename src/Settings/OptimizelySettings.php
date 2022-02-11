@@ -2,8 +2,8 @@
 
 namespace Astrogoat\Optimizely\Settings;
 
-use Helix\Lego\Settings\AppSettings;
 use Astrogoat\Optimizely\Actions\OptimizelyAction;
+use Helix\Lego\Settings\AppSettings;
 
 class OptimizelySettings extends AppSettings
 {
