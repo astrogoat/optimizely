@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton\Commands;
+namespace Astrogoat\Optimizely\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class OptimizelyCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'optimizely';
 
     public $description = 'My command';
 

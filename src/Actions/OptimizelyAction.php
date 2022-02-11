@@ -1,14 +1,14 @@
 <?php
 
-namespace VendorName\Skeleton\Actions;
+namespace Astrogoat\Optimizely\Actions;
 
 use Helix\Lego\Apps\Actions\Action;
 
-class SkeletonAction extends Action
+class OptimizelyAction extends Action
 {
     public static function actionName(): string
     {
-        return 'Skeleton action name';
+        return 'Optimizely action name';
     }
 
     public static function run(): mixed
