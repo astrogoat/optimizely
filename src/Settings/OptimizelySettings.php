@@ -3,14 +3,18 @@
 namespace Astrogoat\Optimizely\Settings;
 
 use Helix\Lego\Settings\AppSettings;
+use Illuminate\Validation\Rule;
 
 class OptimizelySettings extends AppSettings
 {
     public string $account_id;
 
-    protected array $rules = [
-        'account_id' => ['required'],
-    ];
+    public function rules() : array
+    {
+        return [
+            'account_id' => Rule::requiredIf($this->enabled === true),
+        ];
+    }
 
     public function description(): string
     {
