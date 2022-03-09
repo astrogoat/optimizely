@@ -8,7 +8,6 @@ class CreateOptimizelySettings extends SettingsMigration
     {
         $this->migrator->add('optimizely.enabled', false);
         $this->migrator->add('optimizely.account_id', '');
-        // $this->migrator->addEncrypted('optimizely.access_token', '');
     }
 
     public function down()
