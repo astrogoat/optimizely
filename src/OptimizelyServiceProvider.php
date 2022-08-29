@@ -2,10 +2,11 @@
 
 namespace Astrogoat\Optimizely;
 
-use Astrogoat\Optimizely\Settings\OptimizelySettings;
 use Helix\Lego\Apps\App;
 use Helix\Lego\LegoManager;
 use Spatie\LaravelPackageTools\Package;
+use Helix\Lego\Apps\Services\IncludeFrontendViews;
+use Astrogoat\Optimizely\Settings\OptimizelySettings;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 
 class OptimizelyServiceProvider extends PackageServiceProvider
@@ -17,7 +18,9 @@ class OptimizelyServiceProvider extends PackageServiceProvider
             ->settings(OptimizelySettings::class)
             ->migrations([
                 __DIR__ . '/../database/migrations/settings',
-            ]);
+            ])->includeFrontendViews(function (IncludeFrontendViews $views) {
+                return $views->addToHead(['optimizely::script'], 100);
+            });
     }
 
     public function registeringPackage()
@@ -29,6 +32,6 @@ class OptimizelyServiceProvider extends PackageServiceProvider
 
     public function configurePackage(Package $package): void
     {
-        $package->name('optimizely')->hasViews();
+        $package->name('optimizely')->hasViews()->hasConfigFile();
     }
 }
